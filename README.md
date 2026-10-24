@@ -33,5 +33,7 @@ with the most answers wins, and a tie goes to the result listed first.
 ## Deployment
 
 Every push to `main` (including CMS publishes) builds the site and deploys it to GitHub Pages via
-[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). `public/CNAME` sets the custom
-domain. Any other static host works too: build with `bun run build` and serve `dist/`.
+[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml), currently at
+<https://studioroor.github.io/zomers-online/>. The workflow passes the Pages base path to Astro, so
+the site works from that subfolder; after setting zomers.online as custom domain in the repo's Pages
+settings it builds for the root again. Any other static host works too: build with `bun run build` and serve `dist/`.

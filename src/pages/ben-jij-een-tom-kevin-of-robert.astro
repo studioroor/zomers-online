@@ -1,6 +1,7 @@
 ---
 import quiz from '../data/quiz.json'
 import Base from '../layouts/Base.astro'
+import { withBase } from '../lib/url'
 
 const questions = quiz.questions ?? []
 const results = quiz.results ?? []
@@ -12,7 +13,7 @@ const results = quiz.results ?? []
 
     <div class="quiz" data-quiz>
       <section class="step" data-start>
-        {quiz.image && <img class="quiz-image" src={quiz.image} alt="" />}
+        {quiz.image && <img class="quiz-image" src={withBase(quiz.image)} alt="" />}
         <p class="quiz-title">{quiz.intro}</p>
         <button type="button" class="quiz-button" data-action="start">{quiz.startLabel}</button>
       </section>
@@ -49,7 +50,7 @@ const results = quiz.results ?? []
       {
         results.map((r) => (
           <section class="step" data-result={r.key} hidden>
-            {r.image && <img class="result-image" src={r.image} alt={r.name} loading="lazy" />}
+            {r.image && <img class="result-image" src={withBase(r.image)} alt={r.name} loading="lazy" />}
             <p class="result-text">{r.text}</p>
             <button type="button" class="quiz-button" data-action="restart">
               {quiz.restartLabel}

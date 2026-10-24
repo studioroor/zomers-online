@@ -2,6 +2,7 @@
 import '@fontsource-variable/manrope'
 import '../styles/global.css'
 import settings from '../data/settings.json'
+import { withBase } from '../lib/url'
 
 interface Props {
   title?: string
@@ -20,7 +21,7 @@ const fullTitle = title ? `${title} – ${settings.title}` : settings.title
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
-    <link rel="icon" type="image/png" href="/uploads/favicon.png" />
+    <link rel="icon" type="image/png" href={withBase('/uploads/favicon.png')} />
     <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />

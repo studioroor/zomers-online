@@ -1,0 +1,99 @@
+{
+  "intro": "Hoi, mijn naam is Robert en ik ben..",
+  "photo": "/uploads/robert.jpg",
+  "photoAlt": "Robert Zomers",
+  "roles": [
+    {
+      "title": "Redacteur",
+      "text": "Als journalist schrijf ik over technologie, games en (internet)cultuur en daarnaast schrijf ik als redacteur over allerlei onderwerpen voor online media.",
+      "image": "/uploads/redacteur.jpg",
+      "color": "#f2e8d8"
+    },
+    {
+      "title": "Projectcoördinator",
+      "text": "De grote lijnen uitzetten en bepalen wat wel en niet belangrijk is: dat doe ik graag en dan het liefst met zo min mogelijk onnodige vergaderingen.",
+      "image": "/uploads/projectcoordinator.jpg",
+      "color": "#efcfe1"
+    },
+    {
+      "title": "Webbeheerder",
+      "text": "Ik ben moeilijk achter een computer vandaan te krijgen en daardoor ben ik vaak betrokken bij IT-zaken, waar ik ook werk. Door mijn werk als tech-journalist kan ik de vertaalslag maken van wat een organisatie wil, naar wat IT-providers moeten leveren.",
+      "image": "/uploads/webbeheerder.jpg",
+      "color": "#b0d3f0"
+    }
+  ],
+  "mission": "Ik werk graag voor organisaties met een positieve impact op de maatschappij. Dat klinkt inmiddels een beetje cliché, maar dat is wat mij motiveert om mijn beste werk te leveren.",
+  "worksHeading": "Je kunt mij kennen van mijn werk bij",
+  "logos": [
+    {
+      "name": "Computer Idee",
+      "image": "/uploads/logo-computer-idee.png",
+      "url": "/uploads/tech-in-de-tour.pdf"
+    },
+    {
+      "name": "Tweakers",
+      "image": "/uploads/logo-tweakers.png",
+      "url": "https://tweakers.net/reviews/9876/total-war-warhammer-iii-verdeel-en-heers-over-de-chaos.html"
+    },
+    {
+      "name": "NU.nl",
+      "image": "/uploads/logo-nu-nl.png",
+      "url": "https://www.nu.nl/tech-achtergrond/6017974/hoe-de-millenniumbug-twintig-jaar-geleden-toch-geen-problemen-opleverde.html"
+    },
+    {
+      "name": "ID.nl",
+      "image": "/uploads/logo-id-nl.png",
+      "url": "https://id.nl/mobiliteit/auto/laadpaal/3-fase-of-1-fase-en-hoe-zit-het-met-de-meterkast"
+    },
+    {
+      "name": "NORMA fonds",
+      "image": "/uploads/logo-norma-fonds.png",
+      "url": "https://www.stichtingnorma.nl/norma-fonds/"
+    },
+    {
+      "name": "Pixel Vault",
+      "image": "/uploads/logo-pixel-vault.png",
+      "url": "https://pixelvault.nl/auteur/robert-zomers/"
+    },
+    {
+      "name": "Van Eesteren Museum",
+      "image": "/uploads/logo-van-eesteren-museum.png",
+      "url": "https://www.vaneesterenmuseum.nl/"
+    },
+    {
+      "name": "Computer Totaal",
+      "image": "/uploads/logo-computer-totaal.png",
+      "url": ""
+    },
+    {
+      "name": "Stichting MKB Financiering",
+      "image": "/uploads/logo-stichting-mkb-financiering.png",
+      "url": "https://www.stichtingmkbfinanciering.nl/"
+    },
+    {
+      "name": "Iedereen Vond Dat Leuk",
+      "image": "/uploads/logo-iedereen-vond-dat-leuk.png",
+      "url": "https://open.spotify.com/show/3XuGclL3YP9jnXYh3O7aZp?si=063f9420215e44a8"
+    },
+    {
+      "name": "Game Censor",
+      "image": "/uploads/logo-game-censor.png",
+      "url": ""
+    },
+    {
+      "name": "Mad Pack",
+      "image": "/uploads/logo-mad-pack.png",
+      "url": "https://www.madpack.works/"
+    }
+  ],
+  "buttons": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/robert-zomers-32109790/"
+    },
+    {
+      "label": "CV",
+      "url": "/uploads/cv-robert-zomers-2025.pdf"
+    }
+  ]
+}

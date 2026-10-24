@@ -1,0 +1,372 @@
+{
+  "title": "Ben jij een Tom, Kevin of Robert?",
+  "intro": "Ben je een Tom, Kevin of Robert?",
+  "image": "/uploads/quiz-duim.png",
+  "startLabel": "Start",
+  "previousLabel": "Vorige",
+  "nextLabel": "Volgende",
+  "finishLabel": "Bekijk uitslag",
+  "restartLabel": "Opnieuw",
+  "questions": [
+    {
+      "question": "Val je liever per ongeluk in een vulkaan vallen of per ongeluk dodelijk giftige paddenstoelen eten?",
+      "answers": [
+        {
+          "text": "Zei er iemand paddestoelen?",
+          "result": "tom"
+        },
+        {
+          "text": "Ik lust geen paddestoelen",
+          "result": "kevin"
+        },
+        {
+          "text": "Cremeer mij maar in een vulkaan",
+          "result": "robert"
+        }
+      ]
+    },
+    {
+      "question": "Nooit meer een emoji of nooit meer een gifje posten?",
+      "answers": [
+        {
+          "text": "🙂",
+          "result": "tom"
+        },
+        {
+          "text": "Ik zit te diep in mijn gifjes-era",
+          "result": "kevin"
+        },
+        {
+          "text": "Ik doe dan toch gifjes, voor de memes",
+          "result": "robert"
+        }
+      ]
+    },
+    {
+      "question": "Je kunt alleen nog nieuwe series kijken of alleen nog series kijken die je al gezien hebt",
+      "answers": [
+        {
+          "text": "Oude series zijn tof, maar er worden genoeg nieuwe dingen gemaakt",
+          "result": "tom"
+        },
+        {
+          "text": "Ik kan niet zonder mijn comfortshows van vroeger",
+          "result": "kevin"
+        },
+        {
+          "text": "Ik kijk überhaupt nooit iets twee keer",
+          "result": "robert"
+        }
+      ]
+    },
+    {
+      "question": "Je trapt voortaan in elke phishingpoging of je schaft altijd alles aan bij een deur-aan-deurverkoper.",
+      "answers": [
+        {
+          "text": "Ik trap al in elke verkoper die me wat wil aansmeren",
+          "result": "tom"
+        },
+        {
+          "text": "Verkopers aan de deur, die doe ik toch al niet open",
+          "result": "kevin"
+        },
+        {
+          "text": "Ik sta toch al op het darkweb, kom maar door met de vissers",
+          "result": "robert"
+        }
+      ]
+    },
+    {
+      "question": "De rest van je leven alleen maar mobile gacha games of alleen maar EA FC (Fifa) spelen?",
+      "answers": [
+        {
+          "text": "Er is elke dag een nieuwe gacha-game, dus gacha",
+          "result": "tom"
+        },
+        {
+          "text": "Ik ga dan toch over naar het voetbalkamp",
+          "result": "kevin"
+        },
+        {
+          "text": "Allebei verschrikkelijk, maar voetbal is echt het allerergste",
+          "result": "robert"
+        }
+      ]
+    },
+    {
+      "question": "Je mag nooit meer assists gebruiken in racegames of je moet altijd alle assists aan hebben staan op de meest heftige stand (dus ook hele heftige stuur- en remassists)?",
+      "answers": [
+        {
+          "text": "Mario Kart met assists is niet leuk meer, dus gooi ze maar uit!",
+          "result": "tom"
+        },
+        {
+          "text": "Ik speel dan toch liever zonder assists en nooit iets moeilijkers dan Forza Horizon",
+          "result": "kevin"
+        },
+        {
+          "text": "Ik zal mijn sim-racing-carriere moeten opgeven, maar assists uit",
+          "result": "robert"
+        }
+      ]
+    },
+    {
+      "question": "Je mag nooit meer Destiny spelen of nooit meer anime anime kijken.",
+      "answers": [
+        {
+          "text": "Destiny vind ik sowieso niet interessant",
+          "result": "tom"
+        },
+        {
+          "text": "Dan toch anime, want dat biedt meer",
+          "result": "kevin"
+        },
+        {
+          "text": "Ik heb met beide geen probleem",
+          "result": "robert"
+        }
+      ]
+    },
+    {
+      "question": "Nooit meer World of Warcraft spelen of nooit meer de Tour de France kijken?",
+      "answers": [
+        {
+          "text": "World of Warcraft is groter dan de Tour de France",
+          "result": "tom"
+        },
+        {
+          "text": "Ik hoop dat ik aan beide nooit word blootgesteld",
+          "result": "kevin"
+        },
+        {
+          "text": "WoW, nee Tour de France, sorry, wat was de vraag?",
+          "result": "robert"
+        }
+      ]
+    },
+    {
+      "question": "Je moet of Destiny of WoW achter het schuurtje omleggen. Wie kies je?",
+      "answers": [
+        {
+          "text": "Destiny",
+          "result": "tom"
+        },
+        {
+          "text": "Doe het niet Tom",
+          "result": "kevin"
+        },
+        {
+          "text": "Doe het niet Tom",
+          "result": "robert"
+        }
+      ]
+    },
+    {
+      "question": "Oh nee! De middenweg is opgeblazen en je moet kiezen!! Alles analoog (kaarten, boeken, telefoons, postduiven) of alles digitaal (touchscreens, sliders, wireless) voor de rest van je leven?",
+      "answers": [
+        {
+          "text": "Alles digitaal",
+          "result": "tom"
+        },
+        {
+          "text": "Ik haat duiven, maar draadloos nog meer",
+          "result": "kevin"
+        },
+        {
+          "text": "Ik ga wel goed op het pre-internet tijdperk",
+          "result": "robert"
+        }
+      ]
+    },
+    {
+      "question": "Voor altijd moeten spelen op een CRT of op een scherm naar keuze maar nooit meer dan 30 fps.",
+      "answers": [
+        {
+          "text": "Ik wilde eigenlijk al een CRT kopen, dus CRT",
+          "result": "tom"
+        },
+        {
+          "text": "CRT is toch een vibe",
+          "result": "kevin"
+        },
+        {
+          "text": "Ik kan best terug naar een CRT, maar niet naar 30 fps",
+          "result": "robert"
+        }
+      ]
+    },
+    {
+      "question": "Nooit meer Skate 2 of nooit meer SSX?",
+      "answers": [
+        {
+          "text": "SSX is hier het enige juiste antwoord",
+          "result": "tom"
+        },
+        {
+          "text": "Dan toch Skate",
+          "result": "kevin"
+        },
+        {
+          "text": "Ik hoef het allebei niet als ik WoW terugkrijg",
+          "result": "robert"
+        }
+      ]
+    },
+    {
+      "question": "Je krijgt het budget van een volledige AAA videogame voor een remake van of RedCat of A2 Racer. Welke wordt het?",
+      "answers": [
+        {
+          "text": "Met 140 km over de A2 doe ik graag in HD",
+          "result": "tom"
+        },
+        {
+          "text": "Vakantieracer",
+          "result": "kevin"
+        },
+        {
+          "text": "Wist je dat Redcat van een boekhoudkantoor is dat niet meer bestaat?",
+          "result": "robert"
+        }
+      ]
+    },
+    {
+      "question": "Altijd een verdwaalde skittle in je zakje m&m's of altijd een verdwaalde m&m in je zakje skittles?",
+      "answers": [
+        {
+          "text": "Doe mij de Skittle als zoete verrassing",
+          "result": "tom"
+        },
+        {
+          "text": "Ligt er aan welke M&M's, maar geen verdwaalde M&M's alsjeblieft",
+          "result": "kevin"
+        },
+        {
+          "text": "Hoe smaakt een Skittle?",
+          "result": "robert"
+        }
+      ]
+    },
+    {
+      "question": "Voortaan mag je alleen maar een iPhone gebruiken voor al je foto’s en video’s, of alleen maar een volledige camera-setup die je iedere keer moet op- en afbouwen?",
+      "answers": [
+        {
+          "text": "Altijd een iPhone",
+          "result": "tom"
+        },
+        {
+          "text": "Ik kom overal tussen met mijn DSLR",
+          "result": "kevin"
+        },
+        {
+          "text": "Altijd een iPhone",
+          "result": "robert"
+        }
+      ]
+    },
+    {
+      "question": "Een beeldscherm gebruiken zonder USB-hub, of een Switch 2 gebruiken met 4 USB-poorten?",
+      "answers": [
+        {
+          "text": "Een Switch met 4-usb-poort is zelfs mij te veel",
+          "result": "tom"
+        },
+        {
+          "text": "Ik kan echt niet werken zonder usb-hub",
+          "result": "kevin"
+        },
+        {
+          "text": "Ik krijg een Switch 2?",
+          "result": "robert"
+        }
+      ]
+    },
+    {
+      "question": "Abel (uit Breda) moet voortaan het repertoir van Abel (Hangyouth) doen, of Abel (Hangyouth) moet voortaan het repertoir van Abel (uit Breda) doen?",
+      "answers": [
+        {
+          "text": "Abel",
+          "result": "tom"
+        },
+        {
+          "text": "Abel",
+          "result": "kevin"
+        },
+        {
+          "text": "Leg de Zuidas in de as",
+          "result": "robert"
+        }
+      ]
+    },
+    {
+      "question": "Elke game die je speelt heeft voortaan een checklist in beeld met taken of elke game die je speelt heeft helemaal geen doelen.",
+      "answers": [
+        {
+          "text": "Vrijheid, blijheid",
+          "result": "tom"
+        },
+        {
+          "text": "Ik kies mijn eigen pad in Los Santos",
+          "result": "kevin"
+        },
+        {
+          "text": "Ik heb toch die checklist nodig",
+          "result": "robert"
+        }
+      ]
+    },
+    {
+      "question": "Tijdens het gamen moet je altijd een tweedekamerdebat aan hebben op je tweede scherm met geluid of je mag maximaal 25 minuten gamen per dag.",
+      "answers": [
+        {
+          "text": "Wacht, jullie hebben niet altijd al een debat aanstaan?",
+          "result": "tom"
+        },
+        {
+          "text": "25 minuten is echt te weinig",
+          "result": "kevin"
+        },
+        {
+          "text": "Dat debat op de achtergrond kan ik wel aan wennen",
+          "result": "robert"
+        }
+      ]
+    },
+    {
+      "question": "Nooit meer IVDL maken of nooit meer zelf een podcast luisteren?",
+      "answers": [
+        {
+          "text": "Iedereen Vond Dat Leuk blijven maken",
+          "result": "tom"
+        },
+        {
+          "text": "Iedereen Vond Dat Leuk blijven maken",
+          "result": "kevin"
+        },
+        {
+          "text": "Iedereen Vond Dat Leuk blijven maken",
+          "result": "robert"
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "key": "tom",
+      "name": "Tom",
+      "image": "/uploads/quiz-tom.jpg",
+      "text": "Je bent een échte Destiny Killer, of zoals wij hem binnenskamers noemen: Tom Kauwenberg."
+    },
+    {
+      "key": "kevin",
+      "name": "Kevin",
+      "image": "/uploads/quiz-kevin.jpg",
+      "text": "Wie is hier nou de M&M connaisseur?! Dat is Kevin Rombouts, maar jij komt verdacht dicht in de buurt."
+    },
+    {
+      "key": "robert",
+      "name": "Robert",
+      "image": "/uploads/quiz-robert.jpg",
+      "text": "Links lullen, maar ondertussen het liefst 140 rijden over de A2? Niets menselijks is je vreemd, net als Robert."
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+# yaml-language-server: $schema=https://github.com/studioroor/drikus-cms/raw/main/schema/drikus-config.schema.json
+#
+# Editable content of zomers.online for Drikus CMS.
+media:
+  folder: public/uploads
+  publicPath: /uploads
+
+collections:
+  - name: home
+    label: { nl: Homepage, en: Homepage }
+    description: { nl: Alles op de voorpagina, en: Everything on the front page }
+    file: src/data/home.json
+    fields:
+      - { name: intro, label: { nl: Begroeting, en: Greeting }, required: true }
+      - { name: photo, label: { nl: Profielfoto, en: Profile photo }, type: image }
+      - { name: photoAlt, label: { nl: Beschrijving profielfoto, en: Profile photo description } }
+      - name: roles
+        label: { nl: Wat ik doe, en: What I do }
+        hint: { nl: De gekleurde kaarten onder de begroeting, en: The coloured cards below the greeting }
+        type: list
+        fields:
+          - { name: title, label: { nl: Titel, en: Title }, required: true }
+          - { name: text, label: { nl: Tekst, en: Text }, type: text }
+          - { name: image, label: { nl: Afbeelding, en: Image }, type: image }
+          - { name: color, label: { nl: Achtergrondkleur, en: Background colour }, type: color, default: "#e5e5f3" }
+      - { name: mission, label: { nl: Grote tekst, en: Statement }, type: text }
+      - { name: worksHeading, label: { nl: Kop boven logo's, en: Heading above logos } }
+      - name: logos
+        label: { nl: Logo's, en: Logos }
+        type: list
+        fields:
+          - { name: name, label: { nl: Naam, en: Name }, required: true }
+          - { name: image, label: { nl: Logo, en: Logo }, type: image, required: true }
+          - { name: url, label: { nl: Link, en: Link }, type: url, hint: { nl: Mag leeg blijven, en: Optional } }
+      - name: buttons
+        label: { nl: Knoppen, en: Buttons }
+        type: list
+        fields:
+          - { name: label, label: { nl: Tekst, en: Text }, required: true }
+          - { name: url, label: { nl: Link, en: Link }, type: url, required: true }
+
+  - name: quiz
+    label: { nl: Quiz, en: Quiz }
+    description: { nl: "De pagina 'Ben jij een Tom, Kevin of Robert?'", en: "The 'Ben jij een Tom, Kevin of Robert?' page" }
+    file: src/data/quiz.json
+    fields:
+      - { name: title, label: { nl: Paginatitel, en: Page title }, required: true }
+      - { name: intro, label: { nl: Tekst op startscherm, en: Start screen text } }
+      - { name: image, label: { nl: Afbeelding op startscherm, en: Start screen image }, type: image }
+      - { name: startLabel, label: { nl: Knop starten, en: Start button }, required: true, default: Start }
+      - { name: previousLabel, label: { nl: Knop vorige, en: Previous button }, required: true, default: Vorige }
+      - { name: nextLabel, label: { nl: Knop volgende, en: Next button }, required: true, default: Volgende }
+      - { name: finishLabel, label: { nl: Knop uitslag, en: Result button }, required: true, default: Bekijk uitslag }
+      - { name: restartLabel, label: { nl: Knop opnieuw, en: Restart button }, required: true, default: Opnieuw }
+      - name: questions
+        label: { nl: Vragen, en: Questions }
+        type: list
+        minItems: 1
+        fields:
+          - { name: question, label: { nl: Vraag, en: Question }, type: text, required: true }
+          - name: answers
+            label: { nl: Antwoorden, en: Answers }
+            type: list
+            minItems: 2
+            fields:
+              - { name: text, label: { nl: Antwoord, en: Answer }, required: true }
+              - name: result
+                label: { nl: Telt voor, en: Counts towards }
+                type: select
+                required: true
+                options:
+                  - { label: Tom, value: tom }
+                  - { label: Kevin, value: kevin }
+                  - { label: Robert, value: robert }
+      - name: results
+        label: { nl: Uitslagen, en: Results }
+        hint:
+          nl: Wie de meeste antwoorden heeft, is de uitslag. Bij gelijkspel wint de bovenste.
+          en: The result with the most answers wins. A tie goes to the one listed first.
+        type: list
+        minItems: 3
+        maxItems: 3
+        fields:
+          - name: key
+            label: { nl: Uitslag, en: Result }
+            type: select
+            required: true
+            options:
+              - { label: Tom, value: tom }
+              - { label: Kevin, value: kevin }
+              - { label: Robert, value: robert }
+          - { name: name, label: { nl: Naam, en: Name }, required: true }
+          - { name: image, label: { nl: Foto, en: Photo }, type: image }
+          - { name: text, label: { nl: Tekst, en: Text }, type: text, required: true }
+
+  - name: settings
+    label: { nl: Algemeen, en: General }
+    description: { nl: Sitenaam, contactgegevens en de onderkant van elke pagina, en: Site name, contact details and the footer of every page }
+    file: src/data/settings.json
+    fields:
+      - { name: title, label: { nl: Naam van de site, en: Site name }, required: true }
+      - { name: description, label: { nl: Omschrijving voor zoekmachines, en: Description for search engines }, type: text, maxLength: 300 }
+      - name: marquee
+        label: { nl: Bewegende balk, en: Scrolling bar }
+        hint: { nl: De namen in de paarse balk, en: The names in the purple bar }
+        type: list
+        field: { name: name, label: { nl: Naam, en: Name } }
+      - { name: contactHeading, label: { nl: Kop contact, en: Contact heading } }
+      - { name: contactText, label: { nl: Tekst contact, en: Contact text }, type: text }
+      - name: email
+        label: { nl: E-mailadres, en: Email address }
+        hint: { nl: Wordt getoond als 'naam (at) domein' tegen spam, en: "Shown as 'name (at) domain' against spam" }
+        required: true
+      - { name: address, label: { nl: Adres, en: Address }, type: text, hint: { nl: Eén regel per adresregel, en: One line per address line } }
+      - name: webring
+        label: { nl: Andromesh webring, en: Andromesh webring }
+        type: object
+        required: true
+        fields:
+          - { name: name, label: { nl: Titel, en: Title } }
+          - { name: text, label: { nl: Uitleg, en: Explanation }, type: text }
+          - { name: previous, label: { nl: Vorige site, en: Previous site }, type: url }
+          - { name: next, label: { nl: Volgende site, en: Next site }, type: url }
+      - { name: copyright, label: { nl: Copyright, en: Copyright }, hint: { nl: Het jaartal komt er automatisch achter, en: The year is added automatically } }

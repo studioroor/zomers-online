@@ -1,0 +1,56 @@
+---
+import Footer from '../components/Footer.astro'
+import home from '../data/home.json'
+import Base from '../layouts/Base.astro'
+
+const isExternal = (url: string) => /^https?:\/\//.test(url)
+---
+
+<Base>
+  <main>
+    <section class="container intro">
+      <h1>{home.intro}</h1>
+      {home.photo && <img class="photo" src={home.photo} alt={home.photoAlt} width="200" height="200" />}
+    </section>
+
+    <section class="container roles">
+      {
+        (home.roles ?? []).map((role) => (
+          <article class="role" style={`--card: ${role.color}`}>
+            {role.image && <img src={role.image} alt="" loading="lazy" />}
+            <h2>{role.title}</h2>
+            <p>{role.text}</p>
+          </article>
+        ))
+      }
+    </section>
+
+    <section class="container mission">
+      <p>{home.mission}</p>
+      <hr />
+    </section>
+
+    <section class="container works" id="works">
+      <h2>{home.worksHeading}</h2>
+      <ul class="logos">
+        {
+          (home.logos ?? []).map((logo) => (
+            <li>
+              {logo.url ? (
+                <a href={logo.url} target={isExternal(logo.url) ? '_blank' : undefined} rel="noopener">
+                  <img src={logo.image} alt={logo.name} title={logo.name} loading="lazy" />
+                </a>
+              ) : (
+                <img src={logo.image} alt={logo.name} title={logo.name} loading="lazy" />
+              )}
+            </li>
+          ))
+        }
+      </ul>
+      <div class="buttons">
+        {(home.buttons ?? []).map((button) => <a class="button" href={button.url}>{button.label}</a>)}
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Base>

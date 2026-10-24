@@ -1,0 +1,52 @@
+---
+import settings from '../data/settings.json'
+
+const [user, domain] = settings.email.split('@')
+const names: string[] = settings.marquee ?? []
+// Repeat the names so the strip is always wider than the screen.
+const marquee = Array.from({ length: 4 }, () => names).flat().join(' | ')
+const addressLines = (settings.address ?? '').split('\n')
+---
+
+<footer>
+  {
+    names.length > 0 && (
+      <div class="marquee" aria-label={names.join(', ')}>
+        <p aria-hidden="true">
+          <span>{marquee} | </span>
+          <span>{marquee} | </span>
+        </p>
+      </div>
+    )
+  }
+
+  <div class="container contact">
+    <h2>{settings.contactHeading}</h2>
+    <p>{settings.contactText}</p>
+  </div>
+
+  <div class="container details">
+    <a class="email" data-user={user} data-domain={domain} href="#">{user} (at) {domain}</a>
+    <address>
+      {addressLines.map((line) => <span>{line}</span>)}
+    </address>
+  </div>
+
+  <nav class="container webring" aria-label="Andromesh webring">
+    <a href={settings.webring.previous}>&lt;- Vorige</a>
+    <strong>{settings.webring.name}</strong>
+    <a href={settings.webring.next}>Volgende -&gt;</a>
+  </nav>
+  <p class="container webring-text">{settings.webring.text}</p>
+
+  <div class="bottom">
+    <p class="container">{settings.copyright} {new Date().getFullYear()}</p>
+  </div>
+</footer>
+
+<script>
+  // The address is only assembled in the browser, to keep it away from spam bots.
+  for (const a of document.querySelectorAll<HTMLAnchorElement>('a.email')) {
+    a.href = `mailto:${a.dataset.user}@${a.dataset.domain}`
+  }
+</script>

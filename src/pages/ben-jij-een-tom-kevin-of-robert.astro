@@ -1,0 +1,106 @@
+---
+import quiz from '../data/quiz.json'
+import Base from '../layouts/Base.astro'
+
+const questions = quiz.questions ?? []
+const results = quiz.results ?? []
+---
+
+<Base title={quiz.title} bodyClass="quiz-page">
+  <main class="quiz-main">
+    <h1>{quiz.title}</h1>
+
+    <div class="quiz" data-quiz>
+      <section class="step" data-start>
+        {quiz.image && <img class="quiz-image" src={quiz.image} alt="" />}
+        <p class="quiz-title">{quiz.intro}</p>
+        <button type="button" class="quiz-button" data-action="start">{quiz.startLabel}</button>
+      </section>
+
+      {
+        questions.map((q, i) => (
+          <form class="step" data-question hidden>
+            <p class="counter">
+              {i + 1} / {questions.length}
+            </p>
+            <fieldset>
+              <legend>{q.question}</legend>
+              {(q.answers ?? []).map((a) => (
+                <label class="answer">
+                  <input type="radio" name="answer" value={a.result} required />
+                  <span>{a.text}</span>
+                </label>
+              ))}
+            </fieldset>
+            <div class="quiz-nav">
+              {i > 0 && (
+                <button type="button" class="quiz-button secondary" data-action="previous">
+                  {quiz.previousLabel}
+                </button>
+              )}
+              <button type="submit" class="quiz-button">
+                {i === questions.length - 1 ? quiz.finishLabel : quiz.nextLabel}
+              </button>
+            </div>
+          </form>
+        ))
+      }
+
+      {
+        results.map((r) => (
+          <section class="step" data-result={r.key} hidden>
+            {r.image && <img class="result-image" src={r.image} alt={r.name} loading="lazy" />}
+            <p class="result-text">{r.text}</p>
+            <button type="button" class="quiz-button" data-action="restart">
+              {quiz.restartLabel}
+            </button>
+          </section>
+        ))
+      }
+    </div>
+  </main>
+</Base>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-quiz]')!
+  const steps = [...root.querySelectorAll<HTMLElement>('.step')]
+  const questions = [...root.querySelectorAll<HTMLFormElement>('[data-question]')]
+  const results = [...root.querySelectorAll<HTMLElement>('[data-result]')]
+
+  function show(step: HTMLElement) {
+    for (const s of steps) s.hidden = s !== step
+    step.querySelector<HTMLElement>('input:checked, input, button')?.focus({ preventScroll: true })
+  }
+
+  // The result that most answers point to wins; a tie goes to the first result in the list.
+  function outcome() {
+    const counts = new Map<string, number>()
+    for (const form of questions) {
+      const value = new FormData(form).get('answer')
+      if (typeof value === 'string') counts.set(value, (counts.get(value) ?? 0) + 1)
+    }
+    let best = results[0]!
+    for (const r of results) {
+      if ((counts.get(r.dataset.result!) ?? 0) > (counts.get(best.dataset.result!) ?? 0)) best = r
+    }
+    return best
+  }
+
+  questions.forEach((form, i) => {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault()
+      show(questions[i + 1] ?? outcome())
+    })
+  })
+
+  root.addEventListener('click', (event) => {
+    const action = (event.target as HTMLElement).closest<HTMLElement>('[data-action]')?.dataset.action
+    const current = steps.find((s) => !s.hidden)!
+    if (action === 'start') show(questions[0]!)
+    if (action === 'previous') show(questions[questions.indexOf(current as HTMLFormElement) - 1]!)
+    if (action === 'restart') {
+      for (const form of questions) form.reset()
+      show(questions[0]!)
+    }
+  })
+</script>

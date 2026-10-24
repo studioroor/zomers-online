@@ -1,0 +1,29 @@
+{
+  "title": "Zomers Online",
+  "description": "Robert Zomers: redacteur, projectcoördinator en webbeheerder uit Utrecht.",
+  "marquee": [
+    "Reshift",
+    "Van Eesteren Museum",
+    "Mad Pack",
+    "Computer Totaal",
+    "NORMA fonds",
+    "ID.nl",
+    "DPG Media",
+    "Computer Idee",
+    "Pixel Vault",
+    "NU.nl",
+    "Stichting MKB Financiering",
+    "Tweakers"
+  ],
+  "contactHeading": "Een millennial zonder belangst",
+  "contactText": "… maar je telefoonnummer zomaar online zetten is vragen om problemen vandaag de dag. Dus stuur me even een mailtje en dan gaan we ontzettend bellen of koffie drinken",
+  "email": "robert@zomers.online",
+  "address": "Stadstuin\nBernadottelaan 13\n3527 GA Utrecht\nRuimte 2.E.3.",
+  "webring": {
+    "name": "Onderdeel van de Andromesh webring",
+    "text": "Deze site is onderdeel van de Andromesh Webring: Een netwerk van tech & media freelancers gevestigd in Utrecht.",
+    "previous": "https://fairewinds.ca/",
+    "next": "https://kokokoding.nl/nl/"
+  },
+  "copyright": "© Robert Zomers"
+}

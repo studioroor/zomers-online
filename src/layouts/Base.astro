@@ -1,0 +1,31 @@
+---
+import '@fontsource-variable/manrope'
+import '../styles/global.css'
+import settings from '../data/settings.json'
+
+interface Props {
+  title?: string
+  description?: string
+  bodyClass?: string
+}
+
+const { title, description = settings.description, bodyClass } = Astro.props
+const fullTitle = title ? `${title} – ${settings.title}` : settings.title
+---
+
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/png" href="/uploads/favicon.png" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+  </head>
+  <body class={bodyClass}>
+    <slot />
+  </body>
+</html>

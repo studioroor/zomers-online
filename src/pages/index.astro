@@ -2,6 +2,7 @@
 import Footer from '../components/Footer.astro'
 import home from '../data/home.json'
 import Base from '../layouts/Base.astro'
+import { withBase } from '../lib/url'
 
 const isExternal = (url: string) => /^https?:\/\//.test(url)
 ---
@@ -10,14 +11,14 @@ const isExternal = (url: string) => /^https?:\/\//.test(url)
   <main>
     <section class="container intro">
       <h1>{home.intro}</h1>
-      {home.photo && <img class="photo" src={home.photo} alt={home.photoAlt} width="200" height="200" />}
+      {home.photo && <img class="photo" src={withBase(home.photo)} alt={home.photoAlt} width="200" height="200" />}
     </section>
 
     <section class="container roles">
       {
         (home.roles ?? []).map((role) => (
           <article class="role" style={`--card: ${role.color}`}>
-            {role.image && <img src={role.image} alt="" loading="lazy" />}
+            {role.image && <img src={withBase(role.image)} alt="" loading="lazy" />}
             <h2>{role.title}</h2>
             <p>{role.text}</p>
           </article>
@@ -37,18 +38,18 @@ const isExternal = (url: string) => /^https?:\/\//.test(url)
           (home.logos ?? []).map((logo) => (
             <li>
               {logo.url ? (
-                <a href={logo.url} target={isExternal(logo.url) ? '_blank' : undefined} rel="noopener">
-                  <img src={logo.image} alt={logo.name} title={logo.name} loading="lazy" />
+                <a href={withBase(logo.url)} target={isExternal(logo.url) ? '_blank' : undefined} rel="noopener">
+                  <img src={withBase(logo.image)} alt={logo.name} title={logo.name} loading="lazy" />
                 </a>
               ) : (
-                <img src={logo.image} alt={logo.name} title={logo.name} loading="lazy" />
+                <img src={withBase(logo.image)} alt={logo.name} title={logo.name} loading="lazy" />
               )}
             </li>
           ))
         }
       </ul>
       <div class="buttons">
-        {(home.buttons ?? []).map((button) => <a class="button" href={button.url}>{button.label}</a>)}
+        {(home.buttons ?? []).map((button) => <a class="button" href={withBase(button.url)}>{button.label}</a>)}
       </div>
     </section>
   </main>
